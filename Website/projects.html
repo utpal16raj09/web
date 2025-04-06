@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Utpal Raj</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav-background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="projects-styles.css">
+</head>
+<body>
+    <!-- Particles background -->
+    <div class="particles" id="particles"></div>
+    
+    <section id="main-section">
+        <div class="container">
+            <nav class="themed-nav">
+                <div class="nav-brand">UR</div>
+                <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        
+        <section id="projects-section" class="page-section">
+            <div class="section-header" data-aos="fade-up">
+                <h1 class="section-title">My <span class="highlight">Projects</span></h1>
+                <div class="section-line"></div>
+            </div>
+            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">Explore my portfolio of projects showcasing my skills and expertise.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card-content minimalistic-editor">
+                        <div class="project-icon animate__animated animate__pulse animate__infinite animate__slower">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Personal Text Editor</h3>
+                        <p>A simple text editor built with Python and Tkinter.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/utpal16raj09/BlahBlahBlah.git" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> View Code</a>
+                            <a href="#" class="project-btn view-details" data-project="text-editor">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card-content minimalistic-comparison">
+                        <div class="project-icon animate__animated animate__pulse animate__infinite animate__slower">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <h3>Text Comparison Tool</h3>
+                        <p>A tool to compare documents and find similarity percentage between texts.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/utpal16raj09/Text_Comparison_Tool" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> View Code</a>
+                            <a href="#" class="project-btn view-details" data-project="text-comparison">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card-content minimalistic-face">
+                        <div class="project-icon animate__animated animate__pulse animate__infinite animate__slower">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Age & Gender Detection Tool</h3>
+                        <p>An AI-powered application that detects faces in images and predicts gender.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/utpal16raj09/Age_Gender_Detection" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> View Code</a>
+                            <a href="#" class="project-btn view-details" data-project="face-detection">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card-content minimalistic-calculator">
+                        <div class="project-icon animate__animated animate__pulse animate__infinite animate__slower">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3>Simple Calculator</h3>
+                        <p>A scientific calculator built using Java Swing.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/utpal16raj09/scientific_calcl" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> View Code</a>
+                            <a href="#" class="project-btn view-details" data-project="calculator">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-container" data-aos="fade-up" data-aos-delay="300">
+                <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to My Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div class="project-detail-modal" id="projectDetailModal">
+        <div class="project-detail-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-detail-body">
+                <div class="project-detail-image" id="projectDetailImage"></div>
+                <div class="project-detail-description">
+                    <h3 id="projectDetailTitle">Project Overview</h3>
+                    <p id="projectDetailDesc"></p>
+                    <h4>Key Features</h4>
+                    <ul id="projectDetailFeatures"></ul>
+                    <h4>Technologies Used</h4>
+                    <div class="tech-stack" id="projectDetailTech"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Project details data
+        const projectDetails = {
+            'text-editor': {
+                title: 'Personal Text Editor',
+                description: 'A lightweight text editor built with Python and Tkinter that offers essential text editing capabilities with a clean interface.',
+                features: [
+                    'File operations (open, save, save as)',
+                    'Text formatting options',
+                    'Find and replace functionality',
+                    'Syntax highlighting for common programming languages',
+                    'Customizable themes and font options'
+                ],
+                technologies: ['Python', 'Tkinter', 'File I/O', 'Regular Expressions']
+            },
+            'text-comparison': {
+                title: 'Text Comparison Tool',
+                description: 'A tool that analyzes and compares two text documents to determine their similarity percentage using advanced text processing algorithms.',
+                features: [
+                    'Document similarity scoring',
+                    'Keyword extraction and analysis',
+                    'Support for multiple file formats',
+                    'Detailed comparison reports',
+                    'Plagiarism detection capabilities'
+                ],
+                technologies: ['Python', 'NLTK', 'Scikit-learn', 'TF-IDF', 'Cosine Similarity']
+            },
+            'face-detection': {
+                title: 'Age & Gender Detection Tool',
+                description: 'An AI-powered application that can detect faces in images and predict the gender and approximate age of individuals.',
+                features: [
+                    'Real-time face detection',
+                    'Gender classification',
+                    'Age estimation',
+                    'Support for multiple faces in a single image',
+                    'Integration with webcam for live detection'
+                ],
+                technologies: ['Python', 'OpenCV', 'Deep Learning', 'CNN', 'TensorFlow']
+            },
+            'calculator': {
+                title: 'Simple Calculator',
+                description: 'A scientific calculator application built using Java Swing that provides both basic and advanced mathematical operations.',
+                features: [
+                    'Basic arithmetic operations',
+                    'Scientific functions (sin, cos, tan, log, etc.)',
+                    'Memory functions',
+                    'History of calculations',
+                    'Customizable interface'
+                ],
+                technologies: ['Java', 'Swing', 'AWT', 'Event Handling']
+            }
+        };
+
+        // Handle 3D card hover effects
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / card.offsetWidth) - 0.5;
+                const y = ((e.clientY - rect.top) / card.offsetHeight) - 0.5;
+                
+                card.querySelector('.project-card-content').style.transform = 
+                    `rotateY(${x * 10}deg) rotateX(${y * -10}deg) translateZ(20px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.project-card-content').style.transform = 
+                    `rotateY(0deg) rotateX(0deg) translateZ(0px)`;
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('projectDetailModal');
+        const closeModal = document.querySelector('.close-modal');
+        const viewDetailsButtons = document.querySelectorAll('.view-details');
+
+        // Open modal with project details
+        viewDetailsButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectId = button.getAttribute('data-project');
+                const project = projectDetails[projectId];
+                
+                // Set modal content
+                document.getElementById('projectDetailTitle').textContent = project.title;
+                document.getElementById('projectDetailDesc').textContent = project.description;
+                
+                // Set features
+                const featuresList = document.getElementById('projectDetailFeatures');
+                featuresList.innerHTML = '';
+                project.features.forEach(feature => {
+                    const li = document.createElement('li');
+                    li.textContent = feature;
+                    featuresList.appendChild(li);
+                });
+                
+                // Set technologies
+                const techStack = document.getElementById('projectDetailTech');
+                techStack.innerHTML = '';
+                project.technologies.forEach(tech => {
+                    const span = document.createElement('span');
+                    span.className = 'tech-badge';
+                    span.textContent = tech;
+                    techStack.appendChild(span);
+                });
+                
+                // Set image class
+                const imageDiv = document.getElementById('projectDetailImage');
+                imageDiv.className = 'project-detail-image';
+                imageDiv.classList.add(projectId === 'text-editor' ? 'minimalistic-editor' : 
+                                      projectId === 'text-comparison' ? 'minimalistic-comparison' :
+                                      projectId === 'face-detection' ? 'minimalistic-face' : 'minimalistic-calculator');
+                
+                // Show modal
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    
+    <script>
+        // Mobile menu functionality
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+    </script>
+    
+    <script src="script.js"></script>
+        </div>
+    </section>
+</body>
+</html>

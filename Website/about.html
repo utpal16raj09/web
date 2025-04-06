@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav-background.css">
+    <link rel="stylesheet" href="about-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Particles background -->
+    <div class="particles" id="particles"></div>
+    
+    <section id="main-section">
+        <div class="container">
+            <nav class="themed-nav">
+            <div class="nav-brand">UR</div>
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        
+        <section id="about-section" class="page-section">
+            <div class="section-header" data-aos="fade-up">
+                <h1 class="section-title">About <span class="highlight">Me</span></h1>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="images/pp.jpg" alt="Utpal Raj" class="profile-photo-centered">
+                    <div class="image-frame"></div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left">
+                    <h2>Hello, I'm <span class="highlight">Utpal Raj</span></h2>
+                    <p class="about-description">
+                        I am a B.Tech student specializing in Computer Science and Engineering with a focus on Data Science. 
+                        My education has equipped me with a strong foundation in key programming languages and development tools, 
+                        alongside a solid understanding of data analytics and computational methods.
+                    </p>
+                    <p class="about-description">
+                        I am driven by a passion for technology and a commitment to advancing my skills through continuous learning 
+                        and practical experience. My goal is to apply my expertise to tackle real-world problems, contribute to 
+                        innovative solutions, and make a significant impact in the technology sector.
+                    </p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <div class="detail-content">
+                                <h3>Education</h3>
+                                <p>B.Tech in Computer Science, SRM Institute of Science & Technology</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-code"></i>
+                            <div class="detail-content">
+                                <h3>Specialization</h3>
+                                <p>Data Science, Web Development, Programming</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="detail-content">
+                                <h3>Experience</h3>
+                                <p>Project Development, Coding Competitions, Academic Research</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-section" data-aos="fade-up">
+                <h2 class="sub-section-title">Educational <span class="highlight">Journey</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>B.Tech in Computer Science</h3>
+                            <p class="timeline-date">2023 - Present</p>
+                            <p>SRM Institute of Science & Technology, Kattankulathur</p>
+                            <p>Specializing in Data Science with focus on AI/ML applications</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Class XII (CBSE)</h3>
+                            <p class="timeline-date">2021 - 2023</p>
+                            <p>Saint Thomas Senior Secondary School</p>
+                            <p>Focused on Physics, Chemistry, Mathematics and Computer Science</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Matriculation (CBSE)</h3>
+                            <p class="timeline-date">2017 - 2019</p>
+                            <p>Saint Thomas Senior Secondary School</p>
+                            <p>Developed strong foundation in Science and Mathematics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certifications-section" data-aos="fade-up">
+                <h2 class="sub-section-title">Certifications & <span class="highlight">Achievements</span></h2>
+                <div class="certifications-container">
+                    <div class="certification-item" data-aos="fade-right">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>Programming in Java</h3>
+                            <p class="certification-provider">NPTEL</p>
+                            <p class="certification-date">July 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item" data-aos="fade-left">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>Python 101 for Data Science</h3>
+                            <p class="certification-provider">IBM</p>
+                            <p class="certification-date">August 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item" data-aos="fade-right">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>C for Everyone: Programming Fundamentals</h3>
+                            <p class="certification-provider">University of California, Santa Cruz</p>
+                            <p class="certification-date">May 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item" data-aos="fade-left">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>MATLAB Onramp</h3>
+                            <p class="certification-provider">MathWorks</p>
+                            <p class="certification-date">September 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item" data-aos="fade-right">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>Image Processing Onramp</h3>
+                            <p class="certification-provider">MathWorks</p>
+                            <p class="certification-date">October 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item" data-aos="fade-left">
+                        <div class="certification-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>Certificate of Achievement</h3>
+                            <p class="certification-provider">HackWithIndia</p>
+                            <p class="certification-date">December 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <div class="button-container">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to My Portfolio</a>
+        </div>
+
+        <footer>
+            <div class="copyright">
+                <p> Utpal Raj <span id="current-year"></span> | All rights reserved. </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Create particles for background
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 5 + 2;
+                
+                // Random animation duration
+                const duration = Math.random() * 20 + 10;
+                
+                // Set styles
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Add to container
+                particles.appendChild(particle);
+            }
+        }
+        
+        // Call the function when the page loads
+        window.addEventListener('load', createParticles);
+        
+        // Mobile menu functionality
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>

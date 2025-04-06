@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Utpal Raj</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Particles background -->
+    <div class="particles" id="particles"></div>
+    
+    <section id="main-section">
+        <div class="container">
+            <nav class="themed-nav">
+                <div class="nav-brand">UR</div>
+                <ul id="sidemenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="interests.html">Interests</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            </nav>
+            
+            <div class="main-content">
+                <div class="profile-info animate__animated animate__fadeInUp">
+                    <h1>Hi, I am <span class="highlight">Utpal Raj</span></h1>
+                    <p class="typing-text">Building the future with code and creativity.</p>
+                    <p class="profile-description">A passionate tech enthusiast and computer science student specializing in data science and web development.</p>
+                </div>
+                
+                <div class="bold-tagline">Transforming Ideas into Digital Reality</div>
+    <!-- -------------------------------------ABOUT---------------------------- -->
+    <section id="about" class="reveal">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pp.jpg" alt="Utpal Raj">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a B.Tech student specializing in Computer Science and Engineering with a focus on Data Science. My education has equipped me with a strong foundation in key programming languages and development tools, alongside a solid understanding of data analytics and computational methods. I am driven by a passion for technology and a commitment to advancing my skills through continuous learning and practical experience. My goal is to apply my expertise to tackle real-world problems, contribute to innovative solutions, and make a significant impact in the technology sector.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                    </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming Languages</span><br>C, C++, Python, Java</li>
+                                <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                                <li><span>Data Science</span><br>Data Analysis, Machine Learning</li>
+                                <li><span>Developer Tools</span><br>Git, SQL, IDEs (VS Code, IntelliJ IDEA)</li>
+                                <li><span>Frameworks & Libraries</span><br>TensorFlow, OpenCV, Java Swing</li>
+                                <li><span>Soft Skills</span><br>Problem-Solving, Communication, Leadership, Team Collaboration</li>                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023 - Current</span><br><span>B.Tech in Computer Science</span><br>SRM Institute of Science & Technology, Kattankulathur</li>
+                                <li><span>2019 - 2022</span><br><span>Intermediate (CBSE)</span><br>Saint Thomas Senior Secondary School</li>
+                                <li><span>2017 - 2019</span><br><span>Matriculation (CBSE)</span><br>Saint Thomas Senior Secondary School</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="projects">
+                            <ul>
+                                <li><span>March 2024</span><br><span>Personal Text Editor</span><br> Tools used: Python, Tkinter, File I/O operations.</li>
+                                <li><span>February 2024</span><br><span>Text Comparison Tool</span><br> Tools used: Python, Tkinter, File I/O operations.</li>
+                                <li><span>January 2024</span><br><span>Face and Gender Detection</span><br> Tools used: Python, OpenCV, TensorFlow.</li>
+                                <li><span>October 2023</span><br><span>Simple Calculator</span><br> Tools used: JavaSDK, Java Swing.</li>                               
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!----------------------------------------------Portfolio------------------------------------------------------------------>
+<section id="portfolio" class="reveal">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <p class="section-intro">Here's a glimpse of some of my recent work. Visit the projects page to see more details.</p>
+        <div class="project-container">
+            <div class="slider-nav prev" onclick="scrollProjects('left')">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="project-list">
+                <div class="project-wrapper">
+                    <div class="projects minimalistic minimalistic-editor" data-project="text-editor">
+                        <div class="layer">
+                            <h3>Personal Text Editor</h3>
+                            <p>A simple text editor built with Python and Tkinter.</p>
+                            <a href="https://github.com/utpal16raj09/personal-text-editor" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Personal Text Editor</div>
+                </div>
+                
+                <div class="project-wrapper">
+                    <div class="projects minimalistic minimalistic-comparison" data-project="text-comparison">
+                        <div class="layer">
+                            <h3>Text Comparison Tool</h3>
+                            <p>A tool to compare documents and find similarity percentage between texts.</p>
+                            <a href="https://github.com/utpal16raj09/Text_Comparison_Tool" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Text Comparison Tool</div>
+                </div>
+                <div class="view-all-projects">
+                    <a href="projects.html" class="view-all-btn">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="project-wrapper">
+                    <div class="projects minimalistic minimalistic-face" data-project="face-detection">
+                        <div class="layer">
+                            <h3>Face and Gender Detection</h3>
+                            <p>An AI-powered application that detects faces in images and predicts gender.</p>
+                            <a href="https://github.com/utpal16raj09/Age_Gender_Detection" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Age & Gender Detection Tool</div>
+                </div>
+                
+                <div class="project-wrapper">
+                    <div class="projects minimalistic minimalistic-calculator" data-project="calculator">
+                        <div class="layer">
+                            <h3>Scientific Calculator</h3>
+                            <p>A scientific calculator built using Java Swing.</p>
+                            <a href="https://github.com/utpal16raj09/scientific_calcl" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Simple Calculator</div>
+                </div>
+            </div>
+            <div class="slider-nav next" onclick="scrollProjects('right')">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="page-indicator"></div>
+        </div>
+        <a href="#" class="btn">See More Projects</a>
+    </div>
+</section>
+
+<!-- Project Detail Pages -->
+<div id="text-editor-detail" class="project-detail">
+    <div class="project-detail-content">
+        <div class="project-detail-close" onclick="closeProjectDetail('text-editor')">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="project-detail-header">
+            <h2>Personal Text Editor</h2>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Tkinter</span>
+                <span class="tag">GUI</span>
+            </div>
+        </div>
+        <div class="project-detail-body">
+            <div class="project-detail-image minimalistic minimalistic-editor">
+            </div>
+            <div class="project-detail-description">
+                <h3>Project Overview</h3>
+                <p>A lightweight text editor built with Python and Tkinter that provides essential text editing capabilities with a clean interface.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Create, open, edit, and save text files</li>
+                    <li>Cut, copy, paste functionality</li>
+                    <li>Find and replace text</li>
+                    <li>Syntax highlighting for common programming languages</li>
+                    <li>Customizable font and theme options</li>
+                </ul>
+                <div class="project-detail-links">
+                    <a href="https://github.com/utpal16raj09/personal-text-editor" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="text-comparison-detail" class="project-detail">
+    <div class="project-detail-content">
+        <div class="project-detail-close" onclick="closeProjectDetail('text-comparison')">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="project-detail-header">
+            <h2>Text Comparison Tool</h2>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Text Analysis</span>
+            </div>
+        </div>
+        <div class="project-detail-body">
+            <div class="project-detail-image minimalistic minimalistic-comparison">
+            </div>
+            <div class="project-detail-description">
+                <h3>Project Overview</h3>
+                <p>A sophisticated tool that compares two text documents and calculates their similarity using advanced NLP techniques.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Compare text files or direct input</li>
+                    <li>Calculate similarity percentage using various algorithms</li>
+                    <li>Highlight differences between texts</li>
+                    <li>Support for multiple languages</li>
+                    <li>Export comparison results</li>
+                </ul>
+                <div class="project-detail-links">
+                    <a href="https://github.com/utpal16raj09/Text_Comparison_Tool" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="face-detection-detail" class="project-detail">
+    <div class="project-detail-content">
+        <div class="project-detail-close" onclick="closeProjectDetail('face-detection')">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="project-detail-header">
+            <h2>Face and Gender Detection</h2>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Computer Vision</span>
+            </div>
+        </div>
+        <div class="project-detail-body">
+            <div class="project-detail-image minimalistic minimalistic-face">
+            </div>
+            <div class="project-detail-description">
+                <h3>Project Overview</h3>
+                <p>An AI-powered application that detects faces in images and predicts gender using deep learning models.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Real-time face detection in images and video</li>
+                    <li>Gender classification with high accuracy</li>
+                    <li>Batch processing for multiple images</li>
+                    <li>Integration with camera for live detection</li>
+                    <li>Visualization of detection results</li>
+                </ul>
+                <div class="project-detail-links">
+                    <a href="https://github.com/utpal16raj09/Age_Gender_Detection" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="calculator-detail" class="project-detail">
+    <div class="project-detail-content">
+        <div class="project-detail-close" onclick="closeProjectDetail('calculator')">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="project-detail-header">
+            <h2>Scientific Calculator</h2>
+            <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">Swing</span>
+                <span class="tag">Mathematics</span>
+            </div>
+        </div>
+        <div class="project-detail-body">
+            <div class="project-detail-image minimalistic minimalistic-calculator">
+            </div>
+            <div class="project-detail-description">
+                <h3>Project Overview</h3>
+                <p>A comprehensive scientific calculator built using Java Swing that provides advanced mathematical functions.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Basic arithmetic operations</li>
+                    <li>Trigonometric functions (sin, cos, tan)</li>
+                    <li>Logarithmic and exponential calculations</li>
+                    <li>Memory functions</li>
+                    <li>Customizable interface with multiple themes</li>
+                </ul>
+                <div class="project-detail-links">
+                    <a href="https://github.com/utpal16raj09/scientific_calcl" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------------------------------Contact---------------------------------------------------------------->
+
+<section id="contact" class="reveal">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>utpalraj1609@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91-7814967881</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/raj.05.16?igshid=MWx4dnJsNzQyYzFhdA==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/utpal_raj1609" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/utpal-raj-0380b6284" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/utpal16raj09" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/Utpal's Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your E-Mail" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Utpal Raj <span id="current-year"></span><br> All rights reserved. </p>
+        </div>
+    </div>
+</section>
+
+                </div>
+            </div>
+            
+            <footer>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/raj.05.16?igshid=MWx4dnJsNzQyYzFhdA==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/utpal_raj1609" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/utpal-raj-0380b6284" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/utpal16raj09" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="copyright">
+                    <p> Utpal Raj <span id="current-year"></span> | All rights reserved. </p>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Create particles for background
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 5 + 2;
+                
+                // Random animation duration
+                const duration = Math.random() * 20 + 10;
+                
+                // Set styles
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Add to container
+                particles.appendChild(particle);
+            }
+        }
+        
+        // Call the function when the page loads
+        window.addEventListener('load', createParticles);
+        
+        // Handle 3D card hover effects
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / card.offsetWidth) - 0.5;
+                const y = ((e.clientY - rect.top) / card.offsetHeight) - 0.5;
+                
+                card.querySelector('.option-card-content').style.transform = 
+                    `rotateY(${x * 10}deg) rotateX(${y * -10}deg) translateZ(20px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.option-card-content').style.transform = 
+                    `rotateY(0deg) rotateX(0deg) translateZ(0px)`;
+            });
+        });
+        
+        // Mobile menu functionality
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+        
+        function toggleMenu() {
+            const sidemenu = document.getElementById('sidemenu');
+            const isOpen = sidemenu.style.right === '0px';
+            sidemenu.style.right = isOpen ? '-200px' : '0';
+        }
+    </script>
+</body>
+</html>

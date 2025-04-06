@@ -1,0 +1,411 @@
+/* DSA Page Styles */
+:root {
+    --primary-color: #b76e79; /* Rose gold */
+    --secondary-color: #9683ec; /* Lavender */
+    --dark-bg: #000000; /* Black */
+    --light-text: #fff;
+    --card-bg: rgba(0, 0, 0, 0.8);
+    --gradient-1: linear-gradient(45deg, #b76e79, #9683ec);
+    --gradient-2: linear-gradient(135deg, #9683ec, #b76e79);
+    --rose-gold-light: #e8c6c0;
+    --lavender-light: #c7b9ff;
+}
+
+body {
+    background-color: var(--dark-bg);
+    background-image: radial-gradient(circle at top right, rgba(183, 110, 121, 0.15), transparent 70%),
+                      radial-gradient(circle at bottom left, rgba(150, 131, 236, 0.15), transparent 70%),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85));
+    color: var(--light-text);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#dsa-section {
+    padding: 0 0 80px 0;
+    color: #fff;
+    background-color: var(--dark-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    padding: 10px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0 40px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 15px rgba(183, 110, 121, 0.5);
+}
+
+.section-title .highlight {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-line {
+    width: 120px;
+    height: 4px;
+    background: var(--gradient-1);
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(183, 110, 121, 0.5);
+}
+
+.dsa-intro {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ccc;
+    padding: 0 20px;
+    line-height: 1.8;
+}
+
+.dsa-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.dsa-card {
+    width: calc(45% - 30px);
+    max-width: 450px;
+    min-width: 280px;
+    height: 380px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.dsa-card:nth-child(3) {
+    margin-top: 40px;
+    width: 450px;
+}
+
+.dsa-card-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+    background: var(--card-bg);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(183, 110, 121, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.5s ease;
+    border: 1px solid rgba(183, 110, 121, 0.1);
+}
+
+.dsa-card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-1);
+    opacity: 0.1;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+.dsa-card-content:hover::before {
+    opacity: 0.2;
+}
+
+/* Animation for DSA cards */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(183, 110, 121, 0.2);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(183, 110, 121, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(183, 110, 121, 0.2);
+    }
+}
+
+.dsa-card-content:hover {
+    animation: pulse 2s infinite;
+}
+
+.dsa-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(183, 110, 121, 0.3);
+    font-size: 28px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.dsa-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.dsa-card h3::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--gradient-1);
+    bottom: -5px;
+    left: 0;
+    border-radius: 3px;
+}
+
+.dsa-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.dsa-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    background: var(--gradient-1);
+    color: var(--light-text);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(183, 110, 121, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dsa-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(183, 110, 121, 0.5);
+    background: var(--gradient-2);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0 30px;
+    flex-wrap: wrap;
+}
+
+.back-to-portfolio {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 30px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: var(--gradient-1);
+    color: var(--light-text);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn i {
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(183, 110, 121, 0.3);
+}
+
+/* Specific styles for each platform */
+.leetcode .dsa-icon {
+    background: linear-gradient(45deg, rgba(255, 161, 22, 0.2), rgba(199, 146, 234, 0.2));
+    color: #FFA116;
+}
+
+.leetcode:hover .dsa-icon {
+    color: #FFA116;
+    background: linear-gradient(45deg, rgba(255, 161, 22, 0.3), rgba(199, 146, 234, 0.3));
+    box-shadow: 0 0 20px rgba(255, 161, 22, 0.3);
+}
+
+.geeksforgeeks .dsa-icon {
+    background: linear-gradient(45deg, rgba(47, 184, 110, 0.2), rgba(199, 146, 234, 0.2));
+    color: #2FB86E;
+}
+
+.geeksforgeeks:hover .dsa-icon {
+    color: #2FB86E;
+    background: linear-gradient(45deg, rgba(47, 184, 110, 0.3), rgba(199, 146, 234, 0.3));
+    box-shadow: 0 0 20px rgba(47, 184, 110, 0.3);
+}
+
+.code360 .dsa-icon {
+    background: linear-gradient(45deg, rgba(245, 185, 113, 0.2), rgba(199, 146, 234, 0.2));
+    color: var(--rose-gold);
+}
+
+.code360:hover .dsa-icon {
+    color: var(--lavender);
+    background: linear-gradient(45deg, rgba(245, 185, 113, 0.3), rgba(199, 146, 234, 0.3));
+    box-shadow: 0 0 20px rgba(199, 146, 234, 0.3);
+}
+
+/* Animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .dsa-options {
+        gap: 25px;
+    }
+    
+    .sub-title {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dsa-options {
+        gap: 30px;
+    }
+    
+    .dsa-card {
+        width: 90%;
+        max-width: 450px;
+    }
+    
+    .dsa-card:nth-child(3) {
+        width: 90%;
+        margin-top: 30px;
+    }
+    
+    .dsa-intro {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .section-title {
+        font-size: 42px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .section-header {
+        padding: 40px 0 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dsa-card {
+        height: auto;
+        min-height: 350px;
+        width: 100%;
+    }
+    
+    .dsa-card:nth-child(3) {
+        width: 100%;
+    }
+    
+    .dsa-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .dsa-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .dsa-card p {
+        font-size: 0.95rem;
+    }
+    
+    .dsa-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .section-header {
+        padding: 30px 0 20px;
+    }
+    
+    .section-line {
+        width: 80px;
+    }
+}

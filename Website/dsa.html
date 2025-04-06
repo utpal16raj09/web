@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Journey | Utpal Raj</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav-background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="dsa-styles.css">
+</head>
+<body>
+    <!-- Particles background -->
+    <div class="particles" id="particles"></div>
+    
+    <section id="main-section">
+        <div class="container">
+            <nav class="themed-nav">
+            <div class="nav-brand">UR</div>
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        
+        <section id="dsa-section" class="page-section">
+            <div class="section-header" data-aos="fade-up">
+                <h1 class="section-title">My <span class="highlight">DSA Journey</span></h1>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="dsa-intro" data-aos="fade-up" data-aos-delay="100">
+                <p>Explore my coding profiles and problem-solving journey across different platforms.</p>
+            </div>
+            
+            <div class="dsa-options">
+                <div class="dsa-card leetcode" data-aos="fade-up" data-aos-delay="150">
+                    <div class="dsa-card-content">
+                        <div class="dsa-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>LeetCode</h3>
+                        <p>Explore my problem-solving skills with 200+ solved problems ranging from easy to hard difficulty.</p>
+                        <a href="https://leetcode.com/u/raj_1609utpal/" target="_blank" class="dsa-btn">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="dsa-card geeksforgeeks" data-aos="fade-up" data-aos-delay="200">
+                    <div class="dsa-card-content">
+                        <div class="dsa-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3>GeeksForGeeks</h3>
+                        <p>Check out my GeeksForGeeks profile where I've solved numerous DSA problems and contributed to the community.</p>
+                        <a href="https://www.geeksforgeeks.org/user/utpalraxs5e/" target="_blank" class="dsa-btn">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="dsa-card code360" data-aos="fade-up" data-aos-delay="250">
+                    <div class="dsa-card-content">
+                        <div class="dsa-icon">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <h3>Code360</h3>
+                        <p>View my professional coding profile on Naukri's Code360 platform showcasing my technical expertise.</p>
+                        <a href="https://www.naukri.com/code360/profile/raj_utpal1609" target="_blank" class="dsa-btn">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-container" data-aos="fade-up" data-aos-delay="300">
+                <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to My Portfolio</a>
+            </div>
+        </section>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Simple script to handle card hover effects
+        document.querySelectorAll('.dsa-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / card.offsetWidth) - 0.5;
+                const y = ((e.clientY - rect.top) / card.offsetHeight) - 0.5;
+                
+                card.querySelector('.dsa-card-content').style.transform = 
+                    `rotateY(${x * 10}deg) rotateX(${y * -10}deg) translateZ(20px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.dsa-card-content').style.transform = 
+                    `rotateY(0deg) rotateX(0deg) translateZ(0px)`;
+            });
+        });
+    </script>
+</body>
+</html>

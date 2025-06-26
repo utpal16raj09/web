@@ -88,20 +88,22 @@
                 </div>
                 
                 <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-card-content minimalistic-calculator">
-                        <div class="project-icon animate__animated animate__pulse animate__infinite animate__slower">
-                            <i class="fa-solid fa-calculator"></i>
-                        </div>
-                        <h3>Simple Calculator</h3>
-                        <p>A scientific calculator built using Java Swing.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/utpal16raj09/scientific_calcl" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> View Code</a>
-                            <a href="#" class="project-btn view-details" data-project="calculator">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+<div class="project-card" data-aos="fade-up" data-aos-delay="400">
+  <div class="project-card-content minimalistic-image-enhance">
+    <div class="project-icon animate__animated animate__pulse animate__infinite animate__slower">
+      <i class="fa-solid fa-image"></i>
+    </div>
+    <h3>Image Enhancement Tool</h3>
+    <p>A Python-based tool to remove image backgrounds, apply blur and grayscale, and more.</p>
+    <div class="project-links">
+      <a href="https://github.com/utpal16raj09/image_enhance_tool" target="_blank" class="project-btn">
+        <i class="fa-brands fa-github"></i> View Code
+      </a>
+      <a href="#" class="project-btn view-details" data-project="image-enhance">View Details</a>
+    </div>
+  </div>
+</div>
+
             <div class="button-container" data-aos="fade-up" data-aos-delay="300">
                 <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to My Portfolio</a>
             </div>
@@ -165,18 +167,19 @@
                 ],
                 technologies: ['Python', 'OpenCV', 'Deep Learning', 'CNN', 'TensorFlow']
             },
-            'calculator': {
-                title: 'Simple Calculator',
-                description: 'A scientific calculator application built using Java Swing that provides both basic and advanced mathematical operations.',
-                features: [
-                    'Basic arithmetic operations',
-                    'Scientific functions (sin, cos, tan, log, etc.)',
-                    'Memory functions',
-                    'History of calculations',
-                    'Customizable interface'
-                ],
-                technologies: ['Java', 'Swing', 'AWT', 'Event Handling']
-            }
+           'image-enhance': {
+    title: 'Image Enhancement Tool',
+    description: 'A Python-based desktop tool for image processing with background removal, grayscale conversion, and blur features using OpenCV and Rembg.',
+    features: [
+        'Remove background from any image using AI',
+        'Convert images to grayscale',
+        'Apply Gaussian blur effects',
+        'Crop, resize, and preview images live',
+        'Clean and simple dark-themed interface'
+    ],
+    technologies: ['Python', 'OpenCV', 'Rembg', 'Pillow', 'Tkinter']
+}
+
         };
 
         // Handle 3D card hover effects
@@ -234,10 +237,14 @@
                 // Set image class
                 const imageDiv = document.getElementById('projectDetailImage');
                 imageDiv.className = 'project-detail-image';
-                imageDiv.classList.add(projectId === 'text-editor' ? 'minimalistic-editor' : 
-                                      projectId === 'text-comparison' ? 'minimalistic-comparison' :
-                                      projectId === 'face-detection' ? 'minimalistic-face' : 'minimalistic-calculator');
-                
+                imageDiv.classList.add(
+    projectId === 'text-editor' ? 'minimalistic-editor' :
+    projectId === 'text-comparison' ? 'minimalistic-comparison' :
+    projectId === 'face-detection' ? 'minimalistic-face' :
+    projectId === 'image-enhance' ? 'minimalistic-image-enhance' :
+    ''
+);
+
                 // Show modal
                 modal.style.display = 'flex';
             });
